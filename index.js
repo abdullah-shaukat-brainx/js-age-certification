@@ -74,22 +74,16 @@ const calculateAge = () =>
     const yearValue = year.value.trim();
     
     let DOB = new Date();
-    console.log("Year: ",yearValue, " ","Month: ",monthValue, " ","Day: ",dayValue, "  !");
 
     DOB.setFullYear(yearValue, monthValue-1, dayValue);
-    console.log("Date of Birth: ", DOB);
 
     let  month_diff = Date.now() - DOB.getTime();
-    console.log(month_diff);
 
     let age_dt = new Date(month_diff);
-    console.log(age_dt);
 
     let year_dt = age_dt.getUTCFullYear();
-    console.log(year_dt);
 
     let age = Math.abs(year_dt - 1970);
-    console.log(age);
     return age;
 }
 
